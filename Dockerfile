@@ -11,7 +11,7 @@ RUN   mkdir -p /home/runner/actions-runner
 RUN   cd /home/runner/actions-runner && \
       RUNNER_VERSION=$(curl --silent "https://api.github.com/repos/actions/runner/releases/latest" | jq -r '.tag_name[1:]') && \
       curl -o actions-runner-linux-x64-${RUNNER_VERSION}.tar.gz -L "https://github.com/actions/runner/releases/download/v${RUNNER_VERSION}/actions-runner-linux-x64-${RUNNER_VERSION}.tar.gz" && \
-      tar xzf ./actions-runner-linux-x64-2.330.0.tar.gz
+      tar xzf ./actions-runner-linux-x64-${RUNNER_VERSION}.tar.gz
 
 ADD entrypoint.sh /home/runner/entrypoint.sh
 RUN chmod +x /home/runner/entrypoint.sh
