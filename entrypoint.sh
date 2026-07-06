@@ -5,7 +5,7 @@ set -e
 # Extract org from URL
 ORG_NAME=$(echo "$RUNNER_ORG" | awk -F/ '{print $NF}')
 
-# Fetch the runner registration Token from GitHub API
+# Fetch the runner registration token from GitHub API
 RUNNER_TOKEN=$(curl -s -X POST \
     -H "Authorization: Bearer $GITHUB_PAT" \
     -H "Accept: application/vnd.github+json" \
