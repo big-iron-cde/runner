@@ -3,7 +3,8 @@ FROM  debian:trixie-slim
 RUN   useradd -ms /bin/bash runner
 
 RUN   apt-get update && apt-get install -y \
-      curl
+      curl \
+      jq
 
 # Runner Setup
 
