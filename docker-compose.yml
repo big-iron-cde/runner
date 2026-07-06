@@ -1,0 +1,9 @@
+services:
+  runner:
+    image: ${RUNNER_IMAGE}
+    environment:
+      RUNNER_ORG: https://github.com/${GITHUB_ORG}
+      RUNNER_TOKEN: ${RUNNER_TOKEN}
+    privileged: true
+    devices:
+      - "/dev/ttyACM0:/dev/ttyACM0"

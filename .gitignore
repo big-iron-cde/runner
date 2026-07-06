@@ -1,0 +1,39 @@
+# Environment files (secrets, local config)
+.env
+*.env
+!.env.example
+
+# Docker Compose local overrides
+docker-compose.override.yml
+docker-compose.*.yml
+!docker-compose.yml
+
+# Local data / volume mounts
+data/
+volumes/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Build artifacts
+dist/
+build/
+target/
+node_modules/
