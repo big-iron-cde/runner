@@ -5,7 +5,6 @@ FROM  debian:trixie-slim
 # Create runner user
 
 RUN   useradd -ms /bin/bash runner
-RUN   groupadd dialout
 RUN   usermod -aG dialout runner
 
 # Install dependencies
