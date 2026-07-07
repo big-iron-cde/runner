@@ -38,7 +38,7 @@ RUN chmod o+rws /home/runner -R
 # TODO: Install romulan from PyPi
 # BUT: Until then, we clone it
 RUN git clone https://github.com/big-iron-cde/romulan.git
-RUN cd romulan && python -m pip install .
+RUN cd romulan && python -m pip install . --break-system-packages
 
 # Set the runner user as user running workloads
 
