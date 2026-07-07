@@ -12,8 +12,10 @@ RUN   apt-get update && apt-get install -y \
       curl \
       jq \
       git \
+      python3 \
       python3-pip \
-      python3-venv
+      python3-venv \
+      python-is-python3
 
 # Runner Setup (acquires latest version available at image build)
 
@@ -35,8 +37,8 @@ RUN chmod o+rws /home/runner -R
 
 # TODO: Install romulan from PyPi
 # BUT: Until then, we clone it
-git clone https://github.com/big-iron-cde/romulan.git
-cd romulan && python -m pip install .
+RUN git clone https://github.com/big-iron-cde/romulan.git
+RUN cd romulan && python -m pip install .
 
 # Set the runner user as user running workloads
 
