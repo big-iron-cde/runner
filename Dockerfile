@@ -11,6 +11,7 @@ RUN   useradd -ms /bin/bash runner
 RUN   apt-get update && apt-get install -y \
       curl \
       jq \
+      git \
       python3-pip \
       python3-venv
 
