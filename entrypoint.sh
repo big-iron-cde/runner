@@ -22,4 +22,4 @@ else
 fi
 
 # Start the runner in the background
-./run.sh &
+./run.sh
