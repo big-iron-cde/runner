@@ -12,6 +12,7 @@ RUN   apt-get update && apt-get install -y \
       curl \
       jq \
       git \
+      libicu-dev \
       python3 \
       python3-pip \
       python3-venv \
