@@ -41,7 +41,7 @@ RUN chmod o+rws /home/runner -R
 # BUT: Until then, we clone it
 RUN git clone https://github.com/big-iron-cde/romulan.git
 RUN cd romulan && python -m pip install . --break-system-packages
-RUN chgrp bigiron /romulan
+RUN chgrp dialout /romulan
 
 # Set the runner user as user running workloads
 
