@@ -4,6 +4,7 @@ services:
     environment:
       RUNNER_ORG: https://github.com/${GITHUB_ORG}
       RUNNER_TOKEN: ${RUNNER_TOKEN}
+      RUNNER_NAME: TEST_NAME
     privileged: true
     devices:
       - "/dev/ttyACM0:/dev/ttyACM0"
