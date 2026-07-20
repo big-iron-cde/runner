@@ -22,7 +22,6 @@ configure_runner() {
     echo "Obtaining the token of the runner"
     #_TOKEN=$(ACCESS_TOKEN="${ACCESS_TOKEN}" bash /token.sh)
     #RUNNER_TOKEN=$(echo "${_TOKEN}" | jq -r .token)
-  fi
 
   ./config.sh \
       --url "${RUNNER_ORG}" \
