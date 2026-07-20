@@ -48,4 +48,3 @@ RUN cd romulan && python -m pip install . --break-system-packages
 USER runner
 
 ENTRYPOINT ["/home/runner/entrypoint.sh"]
-CMD ["./bin/Runner.Listener", "run", "--startuptype", "service"]
