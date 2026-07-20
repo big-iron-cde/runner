@@ -5,7 +5,7 @@ services:
     environment:
       RUNNER_ORG: https://github.com/${GITHUB_ORG}
       RUNNER_TOKEN: ${RUNNER_TOKEN}
-      RUNNER_NAME: TEST_NAME
+      RUNNER_NAME: ${RUNNER_NAME}
       RUNNER_SCOPE: org
       GITHUB_HOST: ${GITHUB_HOST:-github.com}
       GITHUB_API_HOST: ${GITHUB_API_HOST:-api.github.com}
