@@ -30,8 +30,7 @@ RUN   cd /home/runner/actions-runner && \
 # Copy the entrypoint script and token scriptinto the container
 
 ADD entrypoint.sh /home/runner/entrypoint.sh
-ADD token.sh /home/runner/token.sh
-RUN chmod +x /home/runner/token.sh /home/runner/entrypoint.sh
+RUN chmod +x /home/runner/entrypoint.sh
 
 # Change ownership of relevant directories
 
