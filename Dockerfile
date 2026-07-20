@@ -27,10 +27,11 @@ RUN   cd /home/runner/actions-runner && \
       curl -o actions-runner-linux-x64-${RUNNER_VERSION}.tar.gz -L "https://github.com/actions/runner/releases/download/v${RUNNER_VERSION}/actions-runner-linux-x64-${RUNNER_VERSION}.tar.gz" && \
       tar xzf ./actions-runner-linux-x64-${RUNNER_VERSION}.tar.gz
 
-# Copy the entrypoint script into the container
+# Copy the entrypoint script and token scriptinto the container
 
 ADD entrypoint.sh /home/runner/entrypoint.sh
-RUN chmod +x /home/runner/entrypoint.sh
+ADD token.sh /home/runner/token.sh
+RUN chmod +x /home/runner/token.sh /home/runner/entrypoint.sh
 
 # Change ownership of relevant directories
 
