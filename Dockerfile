@@ -27,7 +27,7 @@ RUN   cd /home/runner/actions-runner && \
       curl -o actions-runner-linux-x64-${RUNNER_VERSION}.tar.gz -L "https://github.com/actions/runner/releases/download/v${RUNNER_VERSION}/actions-runner-linux-x64-${RUNNER_VERSION}.tar.gz" && \
       tar xzf ./actions-runner-linux-x64-${RUNNER_VERSION}.tar.gz
 
-# Copy the entrypoint script into the container
+# Copy the entrypoint script and token scriptinto the container
 
 ADD entrypoint.sh /home/runner/entrypoint.sh
 RUN chmod +x /home/runner/entrypoint.sh
@@ -49,4 +49,3 @@ RUN chmod -R g+w /romulan
 USER runner
 
 ENTRYPOINT ["/home/runner/entrypoint.sh"]
-CMD ["./bin/Runner.Listener", "run", "--startuptype", "service"]

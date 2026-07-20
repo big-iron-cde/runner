@@ -1,9 +1,15 @@
 services:
   runner:
     image: ${RUNNER_IMAGE}
+    stop_grace_period: 60s
     environment:
       RUNNER_ORG: https://github.com/${GITHUB_ORG}
       RUNNER_TOKEN: ${RUNNER_TOKEN}
+      RUNNER_NAME: ${RUNNER_NAME}
+      RUNNER_SCOPE: org
+      GITHUB_HOST: ${GITHUB_HOST:-github.com}
+      GITHUB_API_HOST: ${GITHUB_API_HOST:-api.github.com}
+      API_VERSION: v3
     privileged: true
     devices:
       - "/dev/ttyACM0:/dev/ttyACM0"
