@@ -17,6 +17,9 @@ jobs:
       contents: write
       packages: write
 
+    # Only run if the tag was created from main for now
+    if: github.event.base_ref == 'refs/heads/main'
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
